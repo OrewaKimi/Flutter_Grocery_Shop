@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:grocerytute/pages/home_page.dart';
 
 class IntroPage extends StatelessWidget {
   const IntroPage({super.key});
@@ -40,15 +41,22 @@ class IntroPage extends StatelessWidget {
             const Spacer(),
 
           // get started button
-          Container(
-            decoration: BoxDecoration(
-              color: Colors.deepPurple,
-              borderRadius: BorderRadius.circular(12),
-            ),
-            padding: EdgeInsets.all(24),
-            child: Text(
-              'Get Started',
-            style: TextStyle(color: Colors.white),
+          GestureDetector(
+            onTap: () => Navigator.pushReplacement(context, MaterialPageRoute (
+              builder: (context) {
+              return HomePage();
+            },
+            )),
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.deepPurple,
+                borderRadius: BorderRadius.circular(12),
+              ),
+              padding: const EdgeInsets.all(24),
+              child: const Text(
+                'Get Started',
+              style: TextStyle(color: Colors.white),
+              ),
             ),
           )
         ],
