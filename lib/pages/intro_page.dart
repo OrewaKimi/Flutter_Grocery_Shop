@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:grocerytute/pages/home_page.dart';
 
 class IntroPage extends StatelessWidget {
@@ -22,16 +21,17 @@ class IntroPage extends StatelessWidget {
             child: Text(
               'We deliver groceries to your door step',
               textAlign: TextAlign.center,
-              style: GoogleFonts.notoSerif(
+              style: TextStyle(
                 fontSize: 36,
                 fontWeight: FontWeight.bold,
-                ),
+                fontFamily: 'NotoSerif',
               ),
             ),
+          ),
 
-            const SizedBox(
-              height: 24,
-            ),
+          const SizedBox(
+            height: 24,
+          ),
 
           // Fresh items everyday
           Text('Fresh Items Everyday',
@@ -44,7 +44,7 @@ class IntroPage extends StatelessWidget {
           GestureDetector(
             onTap: () => Navigator.pushReplacement(context, MaterialPageRoute (
               builder: (context) {
-              return HomePage();
+              return const HomePage();
             },
             )),
             child: Container(
